@@ -2,7 +2,7 @@
  * @Author: songyzh
  * @Date: 2022-06-16 11:07:23
  * @LastEditors: songyzh
- * @LastEditTime: 2022-06-17 16:18:07
+ * @LastEditTime: 2022-06-20 10:41:28
  * @Description:
  */
 type Tuple = [number, string]
@@ -150,3 +150,9 @@ type ArrUnion = ['a', 'b'][number]
 type CustomOmit<T, k extends keyof any> = Pick<T, Exclude<keyof T, k>>
 
 type t = Exclude<'a' | 'v' | 't', 'v'>
+
+function say1(age: number) {
+  return age
+}
+
+type pt = typeof say1
