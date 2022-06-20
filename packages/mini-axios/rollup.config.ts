@@ -1,13 +1,15 @@
 /*
- * @Author: songyzh
- * @Date: 2022-06-20 15:10:51
+ * @Description: 
+ * @Version: 1.0
+ * @Autor: songyzh
+ * @Date: 2022-06-20 22:23:25
  * @LastEditors: songyzh
- * @LastEditTime: 2022-06-20 15:29:35
- * @Description:
+ * @LastEditTime: 2022-06-20 23:29:23
  */
+
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
-import typescript from '@rollup/plugin-typescript'
+import ts from 'rollup-plugin-typescript2'
 import json from '@rollup/plugin-json'
 
 const pkg = require('./package.json')
@@ -30,5 +32,11 @@ export default {
   watch: {
     include: 'src/**'
   },
-  plugins: [json(), typescript(), commonjs(), resolve()]
+  plugins: [json(), ts({
+    useTsconfigDeclarationDir: true,
+    tsconfigOverride: {
+      compilerOptions: {
+        declarationDir: './types',
+      }
+    }}), commonjs(), resolve()]
 }
