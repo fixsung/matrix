@@ -1,9 +1,14 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "module": "ESNext",
+    "moduleResolution": "Node"
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["src/*.ts"],
   "exclude": ["dist/*"],
   "references": [{ "path": "../mini-axios/tsconfig.json" }]
 }
