@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sources":["src/index.ts"],"sourcesContent":["/*\r\n * @Author: songyzh\r\n * @Date: 2022-06-20 15:29:04\r\n * @LastEditors: songyzh\r\n * @LastEditTime: 2022-06-20 15:29:05\r\n * @Description:\r\n */\r\nfunction axios() {}\r\n\r\nexport default axios\r\n"],"names":[],"mappings":";;;;;;CAAA;;;;;;CAMG;CACH,SAAS,KAAK;;;;;;;;"}

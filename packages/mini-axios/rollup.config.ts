@@ -1,10 +1,10 @@
 /*
- * @Description: 
+ * @Description:
  * @Version: 1.0
  * @Autor: songyzh
  * @Date: 2022-06-20 22:23:25
  * @LastEditors: songyzh
- * @LastEditTime: 2022-06-20 23:29:23
+ * @LastEditTime: 2022-06-21 09:30:32
  */
 
 import resolve from '@rollup/plugin-node-resolve'
@@ -32,11 +32,12 @@ export default {
   watch: {
     include: 'src/**'
   },
-  plugins: [json(), ts({
-    useTsconfigDeclarationDir: true,
-    tsconfigOverride: {
-      compilerOptions: {
-        declarationDir: './types',
-      }
-    }}), commonjs(), resolve()]
+  plugins: [
+    json(),
+    ts({
+      useTsconfigDeclarationDir: true
+    }),
+    commonjs(),
+    resolve()
+  ]
 }

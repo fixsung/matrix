@@ -2,9 +2,9 @@
   "name": "@mini/axios",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/axios.umd.js",
-  "module": "dist/axios.es5.js",
-  "types": "types/index.d.ts",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "types": "src/index.ts",
   "scripts": {
     "start": "rollup -c rollup.config.ts -w"
   },
