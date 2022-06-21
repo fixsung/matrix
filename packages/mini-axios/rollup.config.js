@@ -4,7 +4,7 @@
  * @Autor: songyzh
  * @Date: 2022-06-20 22:23:25
  * @LastEditors: songyzh
- * @LastEditTime: 2022-06-21 09:30:32
+ * @LastEditTime: 2022-06-21 17:33:57
  */
 
 import resolve from '@rollup/plugin-node-resolve'
@@ -19,15 +19,9 @@ const libraryName = 'mini-axios'
 export default {
   input: `src/index.ts`,
   output: [
-    {
-      file: pkg.main,
-      name: libraryName,
-      format: 'umd',
-      sourcemap: true
-    },
-    { file: pkg.module, format: 'es', sourcemap: true }
+    { file: pkg.main, name: libraryName, format: 'umd' },
+    { file: pkg.module, format: 'es' }
   ],
-
   external: [],
   watch: {
     include: 'src/**'
