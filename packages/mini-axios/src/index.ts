@@ -1,7 +1,7 @@
 import { AxiosRequestConfig } from './types'
 import xhr from './xhr'
 function axios(config: AxiosRequestConfig) {
-  xhr(config)
+  return xhr(config)
 }
 
 export default axios

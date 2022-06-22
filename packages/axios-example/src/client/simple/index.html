@@ -1,11 +1,37 @@
+<!--
+ * @Author: songyzh
+ * @Date: 2022-06-22 15:44:43
+ * @LastEditors: songyzh
+ * @LastEditTime: 2022-06-22 18:13:27
+ * @Description: 
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Simple example</title>
+    <link rel="stylesheet" href="../global.css" />
   </head>
   <body>
+    <div class="example-wrapper">
+      <div class="oper-wrapper">
+        <div class="item" id="simple-btn"><img class="icon" src="../assets/base.svg"></img><a>simple/get</a></div>
+      </div>
+      <div class="info-wrapper">
+        <div class="request-info">
+          <h4>Request Info</h4>
+          <div class="info" id="reqInfo">
+
+          </div>
+        </div>
+        <div class="response-info">
+          <h4>Response Info</h4>
+          <div class="info" id="resInfo">
+
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="/__build__/simple.js"></script>
-    <div id="res">Response:</div>
   </body>
 </html>

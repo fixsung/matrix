@@ -3,6 +3,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   color: #2c3e50;
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
 
@@ -19,7 +22,12 @@ a {
 a:hover {
   color: #FFBE0A;
 }
-
+h4 {
+  border-bottom: 1px solid #cdcbcb;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  color: #7f8c8d;
+}
 .wrapper {
   width: 500px;
   display: flex;
@@ -46,4 +54,28 @@ a:hover {
   width: 25px;
   vertical-align: middle;
   margin-right: 10px;
+}
+
+.example-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 30%)
+}
+
+.oper-wrapper {
+  width: 250px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 30%)
+}
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 5px 10px;
+}
+.request-info,.response-info {
+  height: 50%;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 30%);
+  margin: 10px;
+  padding: 10px;
 }

@@ -2,10 +2,10 @@
  * @Author: songyzh
  * @Date: 2022-06-20 17:33:04
  * @LastEditors: songyzh
- * @LastEditTime: 2022-06-22 15:49:08
+ * @LastEditTime: 2022-06-22 17:31:22
  * @Description:
  */
-import express, { Request, Response } from 'express'
+import express from 'express'
 import webpack from 'webpack'
 import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware from 'webpack-hot-middleware'
@@ -21,7 +21,7 @@ const __dirname = path.dirname(__filename)
 
 const compiler = webpack(WebpackConfig)
 const app = express()
-
+const router = express.Router()
 app.use(
   webpackDevMiddleware(compiler, {
     publicPath: '/__build__/',
@@ -31,11 +31,16 @@ app.use(
 
 app.use(webpackHotMiddleware(compiler))
 
-app.get('/ping', (req: Request, res: Response) => {
-  res.json({ msg: 'hello world' })
-})
+
 app.use(express.static(path.join(__dirname, 'client')))
 
+router.get('/simple/get', function(req, res) {
+  res.json({
+    msg: `hello world`
+  })
+})
+
+app.use(router)
 app.listen(3000, () => {
   console.log(
     green(`mini-axios dev server listening at `) + blue(`http://localhost:3000`)
