@@ -2,7 +2,7 @@
  * @Author: songyzh
  * @Date: 2022-06-20 17:33:04
  * @LastEditors: songyzh
- * @LastEditTime: 2022-06-22 17:31:22
+ * @LastEditTime: 2022-06-23 11:26:51
  * @Description:
  */
 import express from 'express'
@@ -31,15 +31,17 @@ app.use(
 
 app.use(webpackHotMiddleware(compiler))
 
-
 app.use(express.static(path.join(__dirname, 'client')))
 
-router.get('/simple/get', function(req, res) {
+router.get('/simple/get', function (req, res) {
   res.json({
     msg: `hello world`
   })
 })
 
+router.get('/base/get', function (req, res) {
+  res.json(req.query)
+})
 app.use(router)
 app.listen(3000, () => {
   console.log(

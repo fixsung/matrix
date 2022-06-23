@@ -6,8 +6,9 @@
   "module": "dist/mini-axios.esm.js",
   "types": "index.d.ts",
   "scripts": {
-    "start": "rollup -c rollup.config.js ",
-    "build": "npx tsc ./src/index.ts"
+    "start": "rollup -c rollup.config.js",
+    "build": "npx tsc ./src/index.ts",
+    "api": "api-extractor run"
   },
   "keywords": [],
   "author": "",
